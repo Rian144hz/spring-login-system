@@ -25,7 +25,6 @@ Sistema de autenticação e gestão de usuários desenvolvido com **Java** e **S
 
 ## 📸 Demonstração
 
-> **Nota:** Para visualizar as imagens abaixo, certifique-se de que a pasta `screenshots` foi enviada para o repositório.
 
 ### Tela de Cadastro
 Interface para novos usuários se juntarem à comunidade.
