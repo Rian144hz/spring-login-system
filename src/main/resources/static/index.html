@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuarios</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div class="form-box">
+        <h2>Criar Conta</h2>
+        <p>Junte-se à comunidade!</p>
+
+        <form id="cadastroForm">
+            <div class="input-group">
+                <input type="text" id="nome" placeholder="Nome" required>
+                <input type="text" id="sobrenome" placeholder="Sobrenome" required>
+            </div>
+
+            <input type="email" id="email" placeholder="Seu melhor e-mail" required>
+            <input type="password" id="senha" placeholder="Crie uma senha forte" required>
+
+            <button type="submit">Cadastrar</button>
+        </form>
+
+        <p class="footer-text">Já tem uma conta? <a href="login.html">Faça login</a></p>
+    </div>
+</div>
+
+<script>
+    const form = document.getElementById('cadastroForm');
+
+    form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+
+        // Captura os dados dos campos antes de enviar
+        const dados = {
+            nome: document.querySelector('#nome').value,
+            sobreNome: document.querySelector('#sobrenome').value,
+            email: document.querySelector('#email').value,
+            senha: document.querySelector('#senha').value
+        };
+
+        try {
+            const resposta = await fetch('http://localhost:8080/api/usuarios/cadastrar', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(dados)
+            });
+
+            if (resposta.ok) {
+                alert("Cadastrado com sucesso!");
+                window.location.href = "login.html";
+            } else {
+                // Lê a mensagem personalizada enviada pelo ResponseEntity do Java
+                const mensagemErro = await resposta.text();
+                alert(mensagemErro);
+            }
+        } catch (error) {
+            console.error("Erro na conexão:", error);
+            alert("Não foi possível conectar ao servidor Java.");
+        }
+    });
+</script>
+</body>
+</html>
