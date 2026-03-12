@@ -11,8 +11,8 @@ Sistema de autenticação e gestão de utilizadores desenvolvido com **Java** e 
 
 ## 🛠️ Tecnologias Utilizadas
 
-* **Linguagem**: Java 17
-* **Framework**: Spring Boot 3
+* **Linguagem**: Java 21
+* **Framework**: Spring Boot 3.5.12
 * **Persistência**: Spring Data JPA
 * **Base de Dados**: MySQL
 * **Front-end**: HTML5, CSS3 e JavaScript
