@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title> Bem-vindo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" style="max-width: 600px;">
+        <div class="form-box">
+            <h1>Olá, <span id="nomeUsuario">Usuário</span>! 👋</h1>
+            <p>Você acessou o painel com sucesso.</p>
+            
+            <div class="info-card" style="background: #f9f9f9; padding: 20px; border-radius: 8px; margin: 20px 0; text-align: left;">
+                <p><strong>Status:</strong> Autenticado</p>
+            </div>
+
+            <button onclick="sair()" style="background: #ff4444;">Sair do Sistema</button>
+        </div>
+    </div>
+
+    <script>
+        // Lógica simples para o botão sair
+        function sair() {
+            window.location.href = 'login.html';
+        }
+    </script>
+</body>
+</html>
