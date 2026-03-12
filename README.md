@@ -1,33 +1,58 @@
-# 🚀 Spring-login-system
+# 🚀 Spring Login System
 
-Sistema de autenticação e gestão de utilizadores desenvolvido com **Java** e **Spring Boot**. O projeto implementa um fluxo completo de registo e login, com integração a uma base de dados **MySQL**.
+Sistema de autenticação e gestão de usuários desenvolvido com **Java** e **Spring Boot**. O projeto implementa um fluxo completo de registro e login, com integração a uma base de dados **MySQL** e automação de build via **Gradle**.
 
-## 📋 Funcionalidades
-
-* **Registo de Utilizadores**: Captura de nome, sobrenome, e-mail e senha.
-* **Validação de E-mail Único**: Impede o registo de e-mails duplicados através da restrição `@Column(unique = true)` na entidade e validação lógica no Controller.
-* **Autenticação (Login)**: Verificação de credenciais diretamente na base de dados com feedback de erro para dados incorretos.
-* **Interface Web**: Páginas de front-end integradas via JavaScript utilizando a Fetch API.
+---
 
 ## 🛠️ Tecnologias Utilizadas
 
-* **Linguagem**: Java 21
-* **Framework**: Spring Boot 3.5.12
-* **Persistência**: Spring Data JPA
-* **Base de Dados**: MySQL
-* **Front-end**: HTML5, CSS3 e JavaScript
+* **Linguagem:** Java 21+
+* **Framework:** Spring Boot 5.3.12 (Data JPA, Web)
+* **Gerenciador de Dependências:** Gradle
+* **Banco de Dados:** MySQL
+* **Frontend:** HTML5, CSS3 e JavaScript (Fetch API)
 
-## 📂 Estrutura do Projeto
+---
 
-O projeto está organizado seguindo as melhores práticas do ecossistema Spring:
+## 📋 Funcionalidades
 
-* `src/main/java/com/cadastroUsuario/controller/`: Endpoints da API.
-* `src/main/java/com/cadastroUsuario/model/`: Entidades JPA.
-* `src/main/java/com/cadastroUsuario/repository/`: Interfaces de acesso aos dados.
-* `src/main/resources/static/`: Front-end do sistema.
+* **Registro de Usuários:** Captura de nome, sobrenome, e-mail e senha.
+* **Persistência de Dados:** Mapeamento Objeto-Relacional (ORM) com Hibernate.
+* **Autenticação:** Validação de credenciais diretamente na base de dados.
+* **Interface Responsiva:** Telas limpas e intuitivas para o usuário.
 
-## 🚀 Como Executar
+---
 
-1. **Clonar o repositório**:
-   ```bash
-   git clone [https://github.com/rian144hz/spring-login-system.git](https://github.com/rian144hz/spring-login-system.git)
+## 📸 Demonstração
+
+> **Nota:** Para visualizar as imagens abaixo, certifique-se de que a pasta `screenshots` foi enviada para o repositório.
+
+### Tela de Cadastro
+Interface para novos usuários se juntarem à comunidade.
+![Criar Conta](./screenshots/cirarconta.png)
+
+### Tela de Login
+Acesso seguro ao sistema.
+![Login](./screenshots/login.png)
+
+### Painel de Sucesso
+Confirmação de autenticação bem-sucedida.
+![Bem-vindo](./screenshots/contacriada.png)
+
+---
+
+## 🚀 Como executar o projeto
+
+1.  Clone o repositório:
+    ```bash
+    git clone [https://github.com/Rian144hz/spring-login-system.git](https://github.com/Rian144hz/spring-login-system.git)
+    ```
+2.  Configure o banco de dados no arquivo `application.properties`.
+3.  Execute o projeto via terminal (Ubuntu):
+    ```bash
+    ./gradlew bootRun
+    ```
+4.  Acesse no navegador: `http://localhost:8080/index.html`
+
+---
+Desenvolvido por [Matheus Rian](https://github.com/Rian144hz) 👨‍💻
