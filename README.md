@@ -1,4 +1,4 @@
-# 🚀 UserFlow Auth API
+# 🚀 Spring-login-system
 
 Sistema de autenticação e gestão de utilizadores desenvolvido com **Java** e **Spring Boot**. O projeto implementa um fluxo completo de registo e login, com integração a uma base de dados **MySQL**.
 
